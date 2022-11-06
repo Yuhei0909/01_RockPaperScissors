@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>neo jang keng</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>neo jang keng</h1>
+    </header>
+
+    <main>
+        <div class="com">
+            <div class="com1">
+                <p>コンピューター1</p>
+                <div id="com1_hand">
+                    <img src="img/001.gif" alt="">
+                </div>
+                <div id="result1">結果は？</div>
+            </div>
+            <div class="com2">
+                <p>コンピューター2</p>
+                <div id="com2_hand">
+                    <img src="img/002.gif" alt="">
+                </div>
+                <div id="result2">結果は？</div>
+            </div>
+            <div class="com3">
+                <p>コンピューター3</p>
+                <div id="com3_hand">
+                    <img src="img/003.gif" alt="">
+                </div>
+                <div id="result3">結果は？</div>
+            </div>
+        </div>
+        <p>プレイヤー</p>
+        <div id="player_hand">
+            <img src="img/004.gif" alt="">
+        </div>
+        <div id="result4">結果は？</div>
+        <div class="hands">
+            <ul>
+                <li id="rock_btn"><img src="img/001.jpg" alt=""></li>
+                <li id="scissors_btn"><img src="img/002.jpg" alt=""></li>
+                <li id="paper_btn"><img src="img/003.jpg" alt=""></li>
+                <li id="love_btn"><img src="img/004.jpg" alt=""></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $("#rock_btn").on("click", function () {
+            $("#player_hand").children("img").attr("src", "img/001.jpg");
+            const randomNumber = Math.floor(Math.random() * 64)
+            if (randomNumber === 0) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 1) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 2) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 3) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 4) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 5) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 6) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 7) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 8) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 9) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 10) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 11) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 12) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 13) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 14) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 15) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 16) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 17) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 18) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 19) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 20) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 21) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 22) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 23) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 24) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 25) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 26) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 27) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 28) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 29) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 30) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 31) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 32) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 33) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 34) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 35) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 36) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 37) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 38) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 39) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 40) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 41) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 42) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 43) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 44) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 45) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 46) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 47) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 48) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 49) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 50) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 51) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 52) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 53) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 54) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 55) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 56) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 57) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 58) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 59) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 60) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 61) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 62) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            }
+        })
+
+        $("#scissors_btn").on("click", function () {
+            $("#player_hand").children("img").attr("src", "img/002.jpg");
+            const randomNumber = Math.floor(Math.random() * 64)
+            if (randomNumber === 0) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 1) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 2) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 3) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 4) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 5) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 6) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 7) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 8) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 9) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 10) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 11) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 12) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 13) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 14) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 15) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 16) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 17) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 18) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 19) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 20) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 21) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 22) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 23) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 24) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 25) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 26) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 27) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 28) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 29) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 30) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 31) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 32) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 33) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 34) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 35) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 36) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 37) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 38) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 39) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 40) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 41) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 42) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 43) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 44) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 45) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 46) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 47) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 48) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 49) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 50) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 51) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 52) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 53) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 54) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 55) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 56) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 57) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 58) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 59) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 60) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 61) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 62) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            }
+        })
+
+        $("#paper_btn").on("click", function () {
+            $("#player_hand").children("img").attr("src", "img/003.jpg");
+            const randomNumber = Math.floor(Math.random() * 64)
+            if (randomNumber === 0) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 1) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 2) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 3) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 4) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 5) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 6) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 7) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 8) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 9) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 10) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 11) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 12) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 13) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 14) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 15) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 16) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 17) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 18) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 19) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 20) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 21) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 22) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 23) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 24) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 25) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 26) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 27) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 28) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 29) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 30) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 31) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 32) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 33) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 34) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("かち");
+            } else if (randomNumber === 35) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 36) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 37) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 38) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 39) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 40) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 41) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 42) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 43) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 44) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 45) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 46) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 47) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 48) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 49) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 50) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 51) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 52) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 53) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 54) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 55) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 56) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 57) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 58) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 59) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 60) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 61) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 62) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            }
+        })
+
+        $("#love_btn").on("click", function () {
+            $("#player_hand").children("img").attr("src", "img/004.jpg");
+            const randomNumber = Math.floor(Math.random() * 64)
+            if (randomNumber === 0) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 1) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 2) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 3) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 4) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 5) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 6) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 7) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 8) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 9) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 10) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 11) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 12) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 13) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 14) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 15) {
+                $("#com1_hand").children("img").attr("src", "img/001.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 16) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 17) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 18) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 19) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 20) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 21) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 22) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 23) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 24) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 25) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 26) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 27) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 28) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 29) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 30) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 31) {
+                $("#com1_hand").children("img").attr("src", "img/002.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 32) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 33) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 34) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 35) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 36) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 37) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 38) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 39) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 40) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 41) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 42) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("かち");
+            } else if (randomNumber === 43) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 44) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 45) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 46) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 47) {
+                $("#com1_hand").children("img").attr("src", "img/003.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("かち");
+                $("#result2").text("まけ");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 48) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 49) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 50) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 51) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/001.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 52) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 53) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 54) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 55) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/002.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 56) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 57) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 58) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            } else if (randomNumber === 59) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/003.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("かち");
+                $("#result3").text("まけ");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 60) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/001.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 61) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/002.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else if (randomNumber === 62) {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/003.jpg");
+                $("#result1").text("まけ");
+                $("#result2").text("まけ");
+                $("#result3").text("かち");
+                $("#result4").text("まけ");
+            } else {
+                $("#com1_hand").children("img").attr("src", "img/004.jpg");
+                $("#com2_hand").children("img").attr("src", "img/004.jpg");
+                $("#com3_hand").children("img").attr("src", "img/004.jpg");
+                $("#result1").text("あいこ");
+                $("#result2").text("あいこ");
+                $("#result3").text("あいこ");
+                $("#result4").text("あいこ");
+            }
+        })
+    </script>
+
+</body>
+
+</html>
